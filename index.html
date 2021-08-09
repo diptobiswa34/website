@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Courgette&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>my Protfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+
+    </style>
+  </head>
+  <body onload="lodding()">
+    <div id="loding">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <div class="main">
+      <header>
+        <div class="topnav" id="myTopnav">
+          <div class="logo">
+            <a href="#home" class="active">P<span><i class="far fa-smile"></i></span>rtf<span><i class="far fa-smile"></i></span>li<span><i class="far fa-smile"></i></span></a>
+          </div>
+          <div class="nav">
+            <a href="#about">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#mytem">Myteam</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+
+        </div>
+        <div class="some"  data-aos="fade-right" data-aos-duration="1500"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+          <h3>Hello....</h3>
+          <p>My name is <span class="name">Dipto Biswas</span>.</p>
+          <p>And i am a <span class="textani"></span></p>
+          <a href="https://drive.google.com/file/d/16oTPDrB7z0mx0jg_umt7fWeZvlF2g7G4/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button type="button" class="button" name="download"><span>My CV</span></button></a>
+        </div>
+
+
+      </header>
+      <div id="about">
+        <div class="tit" data-aos="zoom-in"  data-aos-duration="2000">
+          <h3>About Me</h3>
+          <h6>Some information about me</h6>
+          <div data-aos="flip-up" data-aos-duration="3000">
+            <div class="chir"></div>
+            <div ></div>
+          </div>
+          
+        </div>
+
+          <div class="res">
+            <div class="aboutl left" data-aos="fade-up-right" data-aos-duration="1000">
+              <img src="img/my.jpg" alt="">
+            </div>
+            <div class="aboutr right mid" data-aos="fade-up-left" data-aos-duration="1000">
+              <div>
+                <h4>About</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div id="Skills">
+
+        <div class="tit" data-aos="zoom-in"  data-aos-duration="2000">
+          <h3>MY Skills</h3>
+          <h6>What I khow</h6>
+          <div class="chir"></div>
+          <div></div>
+        </div>
+
+          <div class="res">
+        <div class="left mid" data-aos="fade-up-right" data-aos-duration="1000">
+              <div>
+                <h4>Skils</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+            <div class="right" data-aos="fade-up-left" data-aos-duration="1000">
+              <div class="progressbar">
+                <label for="html">HTML</label><span style="color:#F97736"><i class="fab fa-html5"></i></span>(90%)<br>
+                <meter id="html" value="90" min="0" max="100"></meter>
+                <label for="css">CSS</label><span style="color:#0088EE"><i class="fab fa-css3-alt"></i></span>(80%)<br>
+                <meter id="css" value="80" min="0" max="100">80%</meter>
+                <label for="javascript">JAVASCRIPT</label><span style="color:#EEBB00"><i class="fab fa-js"></i></span>(60%)<br>
+                <meter id="javascript" value="60" min="0" max="100">60%</meter>
+                <label for="PHP">PHP</label><span style="color:#5674D4"><i class="fab fa-php"></i></span>(70%)<br>
+                <meter id="PHP" value="70" min="0" max="100">70%</meter>
+                <label for="PYTHON">PYTHON</label><span style="color:"><i class="fab fa-python"></i></span>(10%)<br>
+                <meter id="PYTHON" value="10" min="0" max="100">10%</meter>
+                <label for="NODejs">NODE JS</label><span style="color:#6FE86F"><i class="fab fa-node-js"></i></span>(10%)<br>
+                <meter id="NODejs" value="10" min="0" max="100">10%</meter>
+              </div>
+          </div>
+            
+            
+          </div>
+
+      </div>
+      <div id="mytem" >
+
+        <div class="tit" data-aos="zoom-in"  data-aos-duration="2000">
+          <h3>MY Team</h3>
+          <h6>What I khow</h6>
+          <div class="chir"></div>
+          <div></div>
+        </div>
+        <div class="bodd" data-aos="zoom-in-up"  data-aos-duration="2000">
+          <div class="wrapper">
+            <div class="carousel owl-carousel">
+               <div class="card card-1">
+                 <div class="temimg">
+                  <img src="img/man1.png" alt="">
+                 </div>
+                
+                  <h2>Kew Nei</h2>
+                  <p><span>“</span> ipsum dolor sit amet consectetur adipisicing elit. Optio quis, excepturi culpa autem alias asperiores voluptatem atque nesciunt vitae.<span>”</span></p>
+                  <div class="social">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+               </div>
+               <div class="card card-2">
+                <div class="temimg">
+                  <img src="img/man1.png" alt="">
+                 </div>
+                
+                  <h2>Kew Nei</h2>
+                  <p><span>“</span> ipsum dolor sit amet consectetur adipisicing elit. Optio quis, excepturi culpa autem alias asperiores voluptatem atque nesciunt vitae.<span>”</span></p>
+                  <div class="social">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+               </div>
+               <div class="card card-3">
+                <div class="temimg">
+                  <img src="img/man1.png" alt="">
+                 </div>
+                
+                  <h2>Kew Nei</h2>
+                  <p><span>“</span> ipsum dolor sit amet consectetur adipisicing elit. Optio quis, excepturi culpa autem alias asperiores voluptatem atque nesciunt vitae.<span>”</span></p>
+                  <div class="social">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+               </div>
+               <div class="card card-4">
+                <div class="temimg">
+                  <img src="img/man1.png" alt="">
+                 </div>
+                
+                  <h2>Kew Nei</h2>
+                  <p><span>“</span> ipsum dolor sit amet consectetur adipisicing elit. Optio quis, excepturi culpa autem alias asperiores voluptatem atque nesciunt vitae.<span>”</span></p>
+                  <div class="social">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+               </div>
+               <div class="card card-5">
+                <div class="temimg">
+                  <img src="img/man1.png" alt="">
+                 </div>
+                
+                  <h2>Kew Nei</h2>
+                  <p><span>“</span> ipsum dolor sit amet consectetur adipisicing elit. Optio quis, excepturi culpa autem alias asperiores voluptatem atque nesciunt vitae.<span>”</span></p>
+                  <div class="social">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+        </div>
+        
+
+      </div>
+      <div id="contact" data-aos="fade-up"
+      data-aos-offset="200" data-aos-duration="1000">
+        <div class="tit" data-aos="zoom-in"  data-aos-duration="2000">
+          <h3 style="color:white">Contact Me</h3>
+        </div>
+        <div class="res">
+          <div class="cleft">
+            <h2>Follow Me</h2>
+            <div class="social">
+              <a href="https://www.facebook.com/dipto.biswasshuvo/" target="blnck"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/diptobiswasshuvo/" target="blnck"><i class="fab fa-instagram"></i></a>
+              <a href="" target="blnck"><i class="fab fa-whatsapp"></i></a>
+              <a href="" target="blnck"><i class="fab fa-github"></i></a>
+              <a href="" target="blnck"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+          </div>
+          <div class="cright">
+            <h2>SEND A MAIL</h2>
+            <div class="cinput">
+              <input type="email" name="email" id="email" placeholder="enter your email">
+              <textarea name="text" id="text" cols="20" rows="5" placeholder="write your massage"></textarea>
+              <button class="button" id="sent">sent</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <footer>
+        <p>all coyprigh reserve @dipto bsiwas </p>
+      </footer>
+    </div>
+    <script>
+      $(".carousel").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items:1,
+            nav: false
+          },
+          600:{
+            items:2,
+            nav: false
+          },
+          1000:{
+            items:3,
+            nav: false
+          }
+        }
+      });
+   </script>
+    <script>
+    function myFunction() {
+      var x = document.querySelector(".nav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    document.getElementsByName("download").addEventListener('click',()=>{
+
+    })
+
+    </script>
+    <!-- my aos d -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+          // for loading
+    let loadi=document.getElementById("loding");
+    console.log("ball")
+    function lodding(){
+     loadi.style.display="none";
+    }
+      AOS.init();
+    </script>
+  </body>
+</html>

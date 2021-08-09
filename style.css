@@ -1,0 +1,724 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+:root{
+  --font:'Comfortaa', cursive;
+  --maincolor:#0092FF;
+}
+/* for loading animation  */
+/**
+ * Document defaults (don't copy these).
+ */
+ #loding{
+  text-align: center;
+  background-color: #eee;
+  background: fixed;
+  height: 100vh;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/* The loader container */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 200px;
+  height: 200px;
+  
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+
+/* The dot */
+.loader > .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  width: 160px;
+  height: 100px;
+  
+  margin-top: -50px;
+  margin-left: -80px;
+
+  border-radius: 5px;
+
+  background-color: #1e3f57;
+
+  transform-type: preserve-3d;
+
+  animation: dot1 3s cubic-bezier(.55,.3,.24,.99) infinite;
+}
+
+.loader > .dot:nth-child(2) {
+  z-index: 11;
+  
+  width: 150px;
+  height: 90px;
+  
+  margin-top: -45px;
+  margin-left: -75px;
+  
+  border-radius: 3px;
+  
+  background-color: #3c617d;
+  
+  animation-name: dot2;
+}
+
+.loader > .dot:nth-child(3) {
+  z-index: 12;
+  
+  width: 40px;
+  height: 20px;
+  
+  margin-top: 50px;
+  margin-left: -20px;
+  
+  border-radius: 0 0 5px 5px;
+  
+  background-color: #6bb2cd;
+  
+  animation-name: dot3;
+}
+
+@keyframes dot1 {
+  3%, 97% {
+    width: 160px;
+    height: 100px;
+
+    margin-top: -50px;
+    margin-left: -80px;
+  }
+  30%, 36% {
+    width: 80px;
+    height: 120px;
+
+    margin-top: -60px;
+    margin-left: -40px;
+  }
+  63%, 69% {
+    width: 40px;
+    height: 80px;
+
+    margin-top: -40px;
+    margin-left: -20px;
+  }
+}
+
+@keyframes dot2 {
+  3%, 97% {
+    width: 150px;
+    height: 90px;
+
+    margin-top: -45px;
+    margin-left: -75px;
+  }
+  30%, 36% {
+    width: 70px;
+    height: 96px;
+
+    margin-top: -48px;
+    margin-left: -35px;
+  }
+  63%, 69% {
+    width: 32px;
+    height: 60px;
+
+    margin-top: -30px;
+    margin-left: -16px;
+  }
+}
+
+@keyframes dot3 {
+  3%, 97% {
+    width: 40px;
+    height: 20px;
+
+    margin-top: 50px;
+    margin-left: -20px;
+  }
+  30%, 36% {
+    width: 8px;
+    height: 8px;
+
+    margin-top: 49px;
+    margin-left: -5px;
+    
+    border-radius: 8px;
+  }
+  63%, 69% {
+    width: 16px;
+    height: 4px;
+
+    margin-top: -37px;
+    margin-left: -8px;
+    
+    border-radius: 10px;
+  }
+}
+/* for buttto style */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background: none;
+  border: 2px double var(--maincolor);
+  color: var(--maincolor);
+  text-align: center;
+  font-size: 20px;
+  padding: 6px 10px;
+  width: 100px;
+  transition:all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button:hover{
+  border:none;
+  color: white;
+  background: var(--maincolor)
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* button style ses */
+body{
+  font-family: 'Comfortaa', cursive;
+}
+.main{
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+  
+}
+header{
+  height:500px;
+  width: 100%;
+  background-image: url("./img/bg.jpg");
+  background-size: 100% 150%;
+  position: relative;
+}
+
+.topnav {
+  overflow: hidden;
+    background-color: rgba(50, 115, 220, 0.3);
+}
+.logo{
+  float: left;
+}
+.nav{
+  float: right;
+
+}
+
+.nav a,.logo a,.icon{
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 4px 8px;
+  margin: 8px 6px;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.nav a{
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: .4s;
+}
+
+.logo a{
+  margin-top: 1px;
+  font-size: 30px;
+
+}
+.logo span{
+  color:lightgreen;
+  font-size: 20px;
+}
+
+.nav a:hover {
+  background-color: #0092FF;
+  color: white;
+  transition: .4s
+}
+
+.logo a.active {
+  color: #0092FF;
+  font-family: var(--font)
+}
+
+.topnav .icon {
+  display: none;
+}
+/* nav section end */
+
+.textani::before{
+  content: "";
+  animation: textwriter infinite 2s;
+  color: var(--maincolor)
+}
+@keyframes textwriter {
+         0% {
+               content: "|";
+           }
+           4% {
+                        content: "f|";
+                    }
+
+           8% {
+               content: "fu|";
+           }
+           12% {
+               content: "ful|";
+           }
+           16% {
+               content: "full|";
+           }
+           20% {
+               content: "full |";
+           }
+           24% {
+               content: "full s|";
+           }
+           28% {
+               content: "full st|";
+           }
+           32% {
+               content: "full sta|";
+           }
+          36% {
+               content: "full stac|";
+           }
+           40% {
+               content: "full stack|";
+           }
+           44% {
+               content: "full stack |";
+           }
+           48% {
+               content: "full stack w|";
+           }
+           52% {
+               content: "full stack we|";
+           }
+           56% {
+               content: "full stack web|";
+           }
+          60% {
+               content: "full stack web |";
+           }
+           64% {
+               content: "full stack web D|";
+           }
+           68% {
+               content: "full stack web De|";
+           }
+           72% {
+               content: "full stack web Dev|";
+           }
+           76% {
+                content: "full stack web Deve|";
+            }
+
+           80% {
+               content: "full stack web Devel|";
+           }
+           84%{
+             content: "full stack web Develo|";
+           }
+           90%{
+             content: "full stack web Develop|";
+           }
+           95%{
+             content: "full stack web Develope|";
+           }
+
+
+           100% {
+             content: "full stack web Developer";
+           }
+}
+
+.some{
+  margin-left: 10%;
+  margin-top: 200px;
+  color:white;
+}
+.some p{
+  margin-top: 10px;
+}
+.name{
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
+  color:orange;
+}
+/* about section start */
+#about{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+.tit{
+  text-align: center;
+}
+.tit h3{
+  font-family: 'Courgette', cursive;
+  color: var(--maincolor);
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+.tit h6{
+color:var(--maincolor);
+  margin-bottom: 10px;
+}
+.tit div{
+  height: 4px;
+  width: 200px;
+  background:var(--maincolor);
+  margin: 0 auto;
+  margin-bottom: 2px;
+  position: relative;
+
+}
+.chir::before{
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border: 4px solid var(--maincolor);
+  position: absolute;
+  top:-5px;
+  left: 48%;
+border-radius: 50%;
+z-index: 2;
+
+}
+.res{height: 80%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 20px 20px;
+}
+.right,.left{
+  width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  line-height: 20px;
+  padding: inherit;
+  height: 400px;
+  
+}
+.mid{
+  display: flex;
+  align-items: center;
+
+}
+.aboutl ,.left{
+  float: left;
+background: #f3f3f3;
+margin-right: 2%;
+text-align:center;
+
+}
+.aboutr,.right{
+  float: right;
+
+text-align: center;
+background: #f3f3f3;
+
+
+
+}
+h4{
+  border-bottom: 5px double orange;
+  margin-bottom: 10px;
+}
+
+.aboutl img{
+
+width: 100%;
+height: 100%;
+}
+/* skils section started */
+#Skills{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.right meter{
+  width: 100%;
+ height: 30px;
+}
+/* my team section started */
+.bodd{
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.wrapper{
+  width: 100%;
+}
+.carousel{
+  /* max-width: 1200px; */
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: #fff;
+  text-align: center;
+  margin: 0px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  background-color:var(--maincolor);
+}
+.card .temimg{
+  height: 100px;
+  width: 100px;
+ margin:auto;
+ margin-bottom: 20px;
+}
+.card h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.card p{
+  text-align: center;
+  font-size: small;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.card span{
+  font-size: 20px;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+/* contact section started */
+#contact{
+  height: 100%;
+  width: 100%;
+  background-color: var(--maincolor);
+  color: #ffffff;
+  padding: 10px;
+}
+.cleft{
+  width: 50%;
+text-align: center;
+}
+.cleft .social{
+display: flex;
+justify-content: space-around;
+font-size: 30px;
+padding: 0 20px;
+margin-top: 30px;
+}
+.social a{
+  color: rgb(255, 255, 255);
+
+}
+.cright{
+  width: 50%;
+padding: 10px;
+}
+.cright input{
+width: 100%;
+padding: 6px 10px;
+border-radius: 10px;
+border: none;
+outline: none;
+margin-bottom: 20px;
+}
+.cright textarea{
+width: 100%;
+border-radius: 5px;
+outline: none;
+padding: 8px;
+}
+#sent{
+  background:white;
+  border: 1px solid white;
+}
+#sent:hover{
+  color:white;
+  background-color: lightgreen;
+}
+/* footer section stylee? */
+footer{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(50, 115, 220, 0.3);
+}
+meter::-webkit-meter-bar {
+  /* Let's animate this */
+  animation: animate-stripes 5s linear infinite;
+  background-image:
+    linear-gradient(
+      135deg,
+      transparent,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    );
+  background-size: 15px 15px;
+  color: red;
+}
+#html::-webkit-meter-optimum-value {
+  background: #F97736;
+
+}
+#css::-webkit-meter-optimum-value {
+  background: #0088EE;
+}
+#JAVASCRIPT::-webkit-meter-optimum-value {
+  background: #EEBB00;
+}
+#PHP::-webkit-meter-optimum-value {
+  background: #5674D4;
+}
+#PYTHON::-webkit-meter-optimum-value {
+background: linear-gradient(90deg, rgba(228,151,15,0.803921568627451) 48%, rgba(0,212,255,1) 99%);
+}
+#NODejs::-webkit-meter-optimum-value {
+  background: #6FE86F;
+}
+.progressbar{
+  color: var(--maincolor);
+  font-size: 10px;
+}
+.progressbar i{
+  font-size: 10px;
+  padding: 0 4px;
+  
+}
+@keyframes animate-stripes {
+  to { background-position: -50px 0; }
+}
+meter::-webkit-progress-value {
+  background-color: red;
+  border-radius: 3px;
+}
+
+/* make responsive */
+@media screen and (max-width: 600px) {
+  /* .topnav a:not(:first-child) {display: none;} */
+  .nav a{
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .some{
+    margin-top: 100px;
+  }
+  .res{
+    display: block;
+  }
+  .left{
+    float: none;
+    width: 100%;
+
+  }
+  .right{
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+
+  }
+  #Skills{
+    margin-top: 40px;
+  }
+  .cleft{
+    width: 100%;
+  }
+  .cright{
+    width: 100%;
+  }
+  .left,.right{
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .nav.responsive {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgba(50, 115, 220, 0.3);
+    width: 230px;
+    height: 91.5vh;
+    transition: 2s;
+  }
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    width: 95%;
+    border-radius: 0px;
+    float: left;
+    display: block;
+    text-align: left;
+    border: none;
+    font-size: 20px;
+    color:white;
+  }
+}
